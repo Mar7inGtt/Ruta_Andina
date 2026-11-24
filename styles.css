@@ -1,0 +1,583 @@
+/* RUTA ANDINA - estilos CSS3 sin JavaScript */
+:root {
+  --azul: #163a7a;
+  --azul-oscuro: #102d5f;
+  --menta: #41bfbc;
+  --fondo: #f3f7fb;
+  --texto: #17243a;
+  --borde: #c7d3e1;
+  --blanco: #ffffff;
+  --ocupado: #f5e7e7;
+  --seleccionado: #d9f3f1;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--fondo);
+  color: var(--texto);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  letter-spacing: 0.02em;
+}
+
+.pagina {
+  width: min(1100px, calc(100% - 32px));
+  margin: 24px auto;
+  overflow: hidden;
+  background: var(--blanco);
+  border: 3px solid var(--azul);
+  border-radius: 18px;
+  box-shadow: 0 8px 24px rgba(22, 58, 122, 0.08);
+}
+
+.encabezado {
+  min-height: 112px;
+  padding: 22px 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.marca {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--azul);
+  font-size: 1.35rem;
+  font-weight: 800;
+  text-decoration: none;
+  letter-spacing: 0.06em;
+}
+
+.marca-icono {
+  display: grid;
+  width: 52px;
+  height: 52px;
+  place-items: center;
+  border: 3px solid var(--menta);
+  border-radius: 50%;
+  color: var(--azul);
+  font-weight: 800;
+}
+
+.lema {
+  margin: 0;
+  color: var(--azul);
+  font-weight: 700;
+}
+
+.navegacion {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  padding: 8px 5%;
+  background: var(--azul);
+}
+
+.navegacion a {
+  display: inline-flex;
+  min-height: 48px;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 18px;
+  border-radius: 8px;
+  color: var(--blanco);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.navegacion a:hover,
+.navegacion a:focus {
+  background: var(--azul-oscuro);
+  text-decoration: underline;
+}
+
+main {
+  padding: 28px 5% 36px;
+}
+
+.presentacion {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  min-height: 250px;
+  padding: 32px;
+  border-radius: 16px;
+  background: var(--azul);
+  color: var(--blanco);
+}
+
+.presentacion > div:first-child {
+  max-width: 650px;
+}
+
+.etiqueta-superior {
+  margin: 0 0 8px;
+  color: var(--menta);
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.presentacion h1 {
+  max-width: 620px;
+  margin: 0 0 12px;
+  font-size: clamp(2rem, 5vw, 2.8rem);
+  line-height: 1.15;
+}
+
+.presentacion p:not(.etiqueta-superior) {
+  max-width: 580px;
+  margin: 0 0 22px;
+}
+
+.ilustracion {
+  display: flex;
+  flex: 0 0 150px;
+  min-height: 140px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 2px solid var(--menta);
+  border-radius: 18px;
+  color: var(--blanco);
+  font-size: 0.8rem;
+  font-weight: 800;
+}
+
+.bus {
+  color: var(--menta);
+  font-size: 3.8rem;
+  line-height: 1;
+}
+
+.boton {
+  display: inline-flex;
+  min-height: 48px;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 20px;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  font: inherit;
+  font-weight: 800;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.boton-claro {
+  background: var(--blanco);
+  color: var(--azul);
+}
+
+.boton-claro:hover {
+  background: #e8f7f6;
+}
+
+.boton-principal {
+  width: 100%;
+  margin-top: 8px;
+  background: var(--azul);
+  color: var(--blanco);
+}
+
+.boton-principal:hover {
+  background: var(--azul-oscuro);
+}
+
+.titulo-seccion {
+  margin-bottom: 20px;
+}
+
+.titulo-seccion h2,
+.ayuda h2 {
+  margin: 0 0 6px;
+  color: var(--azul);
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  line-height: 1.25;
+}
+
+.titulo-seccion > p:last-child {
+  margin: 0;
+}
+
+.rutas {
+  padding: 34px 0;
+}
+
+.tarjetas-rutas {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.tarjeta-ruta {
+  min-height: 150px;
+  padding: 20px;
+  border: 1px solid var(--borde);
+  border-top: 5px solid var(--menta);
+  border-radius: 12px;
+  background: var(--blanco);
+}
+
+.tarjeta-ruta h3 {
+  margin: 0 0 8px;
+  color: var(--azul);
+  font-size: 1.1rem;
+}
+
+.precio {
+  margin: 0;
+  color: var(--azul);
+  font-size: 1.7rem;
+  font-weight: 800;
+}
+
+.detalle,
+.nota {
+  color: #40516a;
+  font-size: 0.9rem;
+}
+
+.detalle {
+  margin: 2px 0 0;
+}
+
+.nota {
+  margin: 14px 0 0;
+}
+
+.reserva {
+  padding: 28px;
+  border: 1px solid var(--borde);
+  border-radius: 14px;
+  background: #fbfdff;
+}
+
+.grupo-formulario {
+  min-width: 0;
+  margin: 0;
+  padding: 20px;
+  border: 1px solid var(--borde);
+  border-radius: 12px;
+}
+
+.grupo-formulario legend {
+  padding: 0 8px;
+  color: var(--azul);
+  font-size: 1.15rem;
+  font-weight: 800;
+}
+
+.campos-viaje {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.campo {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+
+.campo label {
+  color: var(--azul-oscuro);
+  font-weight: 700;
+}
+
+input,
+select {
+  width: 100%;
+  min-width: 0;
+  min-height: 48px;
+  padding: 10px 12px;
+  border: 1px solid #65758b;
+  border-radius: 7px;
+  background: var(--blanco);
+  color: var(--texto);
+  font: inherit;
+}
+
+input::placeholder {
+  color: #536176;
+  opacity: 1;
+}
+
+.pasos-reserva {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 18px;
+  margin-top: 20px;
+}
+
+.ayuda-campo {
+  display: block;
+  margin: 0 0 12px;
+  color: #40516a;
+  font-size: 0.9rem;
+}
+
+.leyenda-asientos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 12px 0 16px;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.leyenda-asientos span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.estado {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 1px solid var(--azul);
+  border-radius: 4px;
+}
+
+.estado.libre {
+  background: var(--blanco);
+}
+
+.estado.ocupado {
+  background: var(--ocupado);
+  border-style: dashed;
+}
+
+.estado.elegido {
+  background: var(--seleccionado);
+  border: 3px solid var(--azul);
+}
+
+.asientos {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(48px, 1fr));
+  gap: 8px;
+}
+
+.asiento {
+  position: relative;
+  display: block;
+  min-width: 0;
+  cursor: pointer;
+}
+
+.asiento input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
+.asiento span {
+  display: flex;
+  min-height: 58px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #56817f;
+  border-radius: 8px;
+  background: var(--seleccionado);
+  color: var(--azul-oscuro);
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.asiento small {
+  font-size: 0.68rem;
+  font-weight: 600;
+}
+
+.asiento input:checked + span {
+  border: 3px solid var(--azul);
+  background: #bce9e6;
+}
+
+.asiento input:focus-visible + span {
+  outline: 3px solid var(--azul);
+  outline-offset: 3px;
+}
+
+.datos-pasajero {
+  align-self: start;
+}
+
+.datos-pasajero .campo {
+  margin-bottom: 14px;
+}
+
+.ayuda {
+  margin-top: 28px;
+  padding: 22px;
+  border-left: 6px solid var(--menta);
+  border-radius: 8px;
+  background: #f0fbfa;
+}
+
+.ayuda p {
+  margin: 6px 0 0;
+}
+
+.pie-pagina {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 22px 5%;
+  border-top: 3px solid var(--menta);
+  background: var(--azul);
+  color: var(--blanco);
+}
+
+.pie-pagina p {
+  margin: 0;
+}
+
+.redes {
+  display: flex;
+  gap: 8px;
+}
+
+.redes a {
+  display: inline-grid;
+  width: 48px;
+  height: 48px;
+  place-items: center;
+  border: 1px solid var(--menta);
+  border-radius: 8px;
+  color: var(--blanco);
+  font-size: 1.2rem;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.volver {
+  min-height: 48px;
+  display: inline-flex;
+  align-items: center;
+  color: var(--blanco);
+  font-weight: 700;
+}
+
+/* Foco visible para navegación con teclado */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible {
+  outline: 3px solid var(--azul);
+  outline-offset: 3px;
+  box-shadow: 0 0 0 2px var(--blanco);
+}
+
+.navegacion a:focus-visible,
+.boton-principal:focus-visible,
+.redes a:focus-visible,
+.volver:focus-visible {
+  outline-color: var(--menta);
+}
+
+/* Evita animaciones innecesarias si el usuario lo solicita en su dispositivo */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@media (max-width: 760px) {
+  .pagina {
+    width: min(100% - 16px, 600px);
+    margin: 8px auto;
+    border-radius: 12px;
+  }
+
+  .encabezado {
+    min-height: auto;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    padding: 18px 5%;
+  }
+
+  .navegacion {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 4px;
+  }
+
+  .navegacion a {
+    padding: 8px;
+    text-align: center;
+  }
+
+  main {
+    padding: 18px 4% 26px;
+  }
+
+  .presentacion {
+    min-height: auto;
+    padding: 24px 20px;
+  }
+
+  .ilustracion {
+    display: none;
+  }
+
+  .tarjetas-rutas,
+  .campos-viaje,
+  .pasos-reserva {
+    grid-template-columns: 1fr;
+  }
+
+  .reserva {
+    padding: 18px 12px;
+  }
+
+  .grupo-formulario {
+    padding: 16px 12px;
+  }
+
+  .pie-pagina {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 380px) {
+  .asientos {
+    grid-template-columns: repeat(4, minmax(48px, 1fr));
+  }
+
+  .presentacion h1 {
+    font-size: 1.8rem;
+  }
+}

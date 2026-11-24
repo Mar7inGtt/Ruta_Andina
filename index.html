@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Consulta rutas y precios y prepara tu reserva de pasajes interprovinciales con Cooperativa Ruta Andina.">
+  <title>Ruta Andina | Reserva tu pasaje</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="pagina">
+    <header class="encabezado" id="inicio">
+      <a class="marca" href="#inicio" aria-label="Ruta Andina, ir al inicio">
+        <span class="marca-icono" aria-hidden="true">RA</span>
+        <span>RUTA ANDINA</span>
+      </a>
+      <p class="lema">Viaja cómodo y seguro</p>
+    </header>
+
+    <nav class="navegacion" aria-label="Navegación principal">
+      <a href="#inicio">Inicio</a>
+      <a href="#rutas">Rutas y precios</a>
+      <a href="#reservar">Reservar</a>
+      <a href="#ayuda">Ayuda</a>
+    </nav>
+
+    <main>
+      <section class="presentacion" aria-labelledby="titulo-principal">
+        <div>
+          <p class="etiqueta-superior">COOPERATIVA DE TRANSPORTE INTERPROVINCIAL</p>
+          <h1 id="titulo-principal">Tu próximo viaje comienza aquí</h1>
+          <p>Consulta nuestras rutas, revisa los precios y prepara tu reserva de pasaje.</p>
+          <a class="boton boton-claro" href="#reservar">Reservar mi pasaje</a>
+        </div>
+        <div class="ilustracion" aria-hidden="true">
+          <span class="bus">▰</span>
+          <span>RUTA ANDINA</span>
+        </div>
+      </section>
+
+      <section class="rutas" id="rutas" aria-labelledby="titulo-rutas">
+        <div class="titulo-seccion">
+          <p class="etiqueta-superior">PLANIFICA TU VIAJE</p>
+          <h2 id="titulo-rutas">Rutas y precios referenciales</h2>
+          <p>Selecciona tu destino y conoce el precio referencial del pasaje.</p>
+        </div>
+
+        <div class="tarjetas-rutas">
+          <article class="tarjeta-ruta">
+            <h3>Quito – Guayaquil</h3>
+            <p class="precio">$12,50</p>
+            <p class="detalle">Precio referencial por pasaje</p>
+          </article>
+          <article class="tarjeta-ruta">
+            <h3>Quito – Cuenca</h3>
+            <p class="precio">$14,00</p>
+            <p class="detalle">Precio referencial por pasaje</p>
+          </article>
+          <article class="tarjeta-ruta">
+            <h3>Quito – Loja</h3>
+            <p class="precio">$18,00</p>
+            <p class="detalle">Precio referencial por pasaje</p>
+          </article>
+        </div>
+        <p class="nota">Los precios y horarios son referenciales. Confírmalos con la cooperativa antes de viajar.</p>
+      </section>
+
+      <article class="reserva" id="reservar" aria-labelledby="titulo-reserva">
+        <div class="titulo-seccion">
+          <p class="etiqueta-superior">UN PROCESO SENCILLO</p>
+          <h2 id="titulo-reserva">Reserva tu pasaje</h2>
+          <p>Completa los pasos y revisa tus datos antes de continuar.</p>
+        </div>
+
+        <form action="#" method="get">
+          <fieldset class="grupo-formulario">
+            <legend>1. Elige tu viaje</legend>
+            <div class="campos-viaje">
+              <div class="campo">
+                <label for="ruta">Ruta</label>
+                <select id="ruta" name="ruta" required>
+                  <option value="">Selecciona una ruta</option>
+                  <option value="Quito - Guayaquil">Quito – Guayaquil</option>
+                  <option value="Quito - Cuenca">Quito – Cuenca</option>
+                  <option value="Quito - Loja">Quito – Loja</option>
+                </select>
+              </div>
+              <div class="campo">
+                <label for="fecha">Fecha de viaje</label>
+                <input type="date" id="fecha" name="fecha" required>
+              </div>
+              <div class="campo">
+                <label for="horario">Horario de salida</label>
+                <select id="horario" name="horario" required>
+                  <option value="">Selecciona un horario</option>
+                  <option value="07:00">07:00</option>
+                  <option value="12:00">12:00</option>
+                  <option value="17:00">17:00</option>
+                </select>
+              </div>
+            </div>
+          </fieldset>
+
+          <div class="pasos-reserva">
+            <fieldset class="grupo-formulario grupo-asientos">
+              <legend>2. Selecciona un asiento</legend>
+              <p class="ayuda-campo">Elige un asiento disponible. Cada opción tiene su número y estado escrito.</p>
+              <div class="leyenda-asientos" aria-label="Estados de los asientos">
+                <span><i class="estado libre" aria-hidden="true"></i> Libre</span>
+                <span><i class="estado ocupado" aria-hidden="true"></i> Ocupado</span>
+                <span><i class="estado elegido" aria-hidden="true"></i> Seleccionado</span>
+              </div>
+              <div class="asientos">
+                <label class="asiento"><input type="radio" name="asiento" value="01" required><span>01 <small>Libre</small></span></label>
+                <label class="asiento"><input type="radio" name="asiento" value="02"><span>02 <small>Libre</small></span></label>
+                <label class="asiento"><input type="radio" name="asiento" value="03"><span>03 <small>Libre</small></span></label>
+                <label class="asiento"><input type="radio" name="asiento" value="04"><span>04 <small>Libre</small></span></label>
+                <label class="asiento"><input type="radio" name="asiento" value="05"><span>05 <small>Libre</small></span></label>
+                <label class="asiento"><input type="radio" name="asiento" value="06"><span>06 <small>Libre</small></span></label>
+                <label class="asiento"><input type="radio" name="asiento" value="07"><span>07 <small>Libre</small></span></label>
+                <label class="asiento"><input type="radio" name="asiento" value="08"><span>08 <small>Libre</small></span></label>
+                <label class="asiento"><input type="radio" name="asiento" value="09"><span>09 <small>Libre</small></span></label>
+                <label class="asiento"><input type="radio" name="asiento" value="10"><span>10 <small>Libre</small></span></label>
+                <label class="asiento"><input type="radio" name="asiento" value="11"><span>11 <small>Libre</small></span></label>
+                <label class="asiento"><input type="radio" name="asiento" value="12"><span>12 <small>Libre</small></span></label>
+                <label class="asiento"><input type="radio" name="asiento" value="13"><span>13 <small>Libre</small></span></label>
+                <label class="asiento"><input type="radio" name="asiento" value="14"><span>14 <small>Libre</small></span></label>
+                <label class="asiento"><input type="radio" name="asiento" value="15"><span>15 <small>Libre</small></span></label>
+                <label class="asiento"><input type="radio" name="asiento" value="16"><span>16 <small>Libre</small></span></label>
+                <label class="asiento"><input type="radio" name="asiento" value="17"><span>17 <small>Libre</small></span></label>
+                <label class="asiento"><input type="radio" name="asiento" value="18"><span>18 <small>Libre</small></span></label>
+                <label class="asiento"><input type="radio" name="asiento" value="19"><span>19 <small>Libre</small></span></label>
+                <label class="asiento"><input type="radio" name="asiento" value="20"><span>20 <small>Libre</small></span></label>
+                <label class="asiento"><input type="radio" name="asiento" value="21"><span>21 <small>Libre</small></span></label>
+                <label class="asiento"><input type="radio" name="asiento" value="22"><span>22 <small>Libre</small></span></label>
+                <label class="asiento"><input type="radio" name="asiento" value="23"><span>23 <small>Libre</small></span></label>
+                <label class="asiento"><input type="radio" name="asiento" value="24"><span>24 <small>Libre</small></span></label>
+                <label class="asiento"><input type="radio" name="asiento" value="25"><span>25 <small>Libre</small></span></label>
+                <label class="asiento"><input type="radio" name="asiento" value="26"><span>26 <small>Libre</small></span></label>
+                <label class="asiento"><input type="radio" name="asiento" value="27"><span>27 <small>Libre</small></span></label>
+                <label class="asiento"><input type="radio" name="asiento" value="28"><span>28 <small>Libre</small></span></label>
+                <label class="asiento"><input type="radio" name="asiento" value="29"><span>29 <small>Libre</small></span></label>
+                <label class="asiento"><input type="radio" name="asiento" value="30"><span>30 <small>Libre</small></span></label>
+                <label class="asiento"><input type="radio" name="asiento" value="31"><span>31 <small>Libre</small></span></label>
+                <label class="asiento"><input type="radio" name="asiento" value="32"><span>32 <small>Libre</small></span></label>
+                <label class="asiento"><input type="radio" name="asiento" value="33"><span>33 <small>Libre</small></span></label>
+                <label class="asiento"><input type="radio" name="asiento" value="34"><span>34 <small>Libre</small></span></label>
+                <label class="asiento"><input type="radio" name="asiento" value="35"><span>35 <small>Libre</small></span></label>
+                <label class="asiento"><input type="radio" name="asiento" value="36"><span>36 <small>Libre</small></span></label>
+                <label class="asiento"><input type="radio" name="asiento" value="37"><span>37 <small>Libre</small></span></label>
+                <label class="asiento"><input type="radio" name="asiento" value="38"><span>38 <small>Libre</small></span></label>
+                <label class="asiento"><input type="radio" name="asiento" value="39"><span>39 <small>Libre</small></span></label>
+                <label class="asiento"><input type="radio" name="asiento" value="40"><span>40 <small>Libre</small></span></label>
+              </div>
+              <p class="nota">La disponibilidad de estos asientos es ilustrativa y no se actualiza en tiempo real.</p>
+            </fieldset>
+
+            <fieldset class="grupo-formulario datos-pasajero">
+              <legend>3. Completa tus datos</legend>
+              <div class="campo">
+                <label for="nombre">Nombre completo</label>
+                <input type="text" id="nombre" name="nombre" autocomplete="name" placeholder="Escribe tus nombres y apellidos" required>
+              </div>
+              <div class="campo">
+                <label for="cedula">Número de cédula</label>
+                <input type="text" id="cedula" name="cedula" inputmode="numeric" autocomplete="off" minlength="10" maxlength="10" pattern="[0-9]{10}" placeholder="10 dígitos" aria-describedby="ayuda-cedula" required>
+                <small id="ayuda-cedula" class="ayuda-campo">Ingresa los 10 números de tu cédula.</small>
+              </div>
+              <div class="campo">
+                <label for="correo">Correo electrónico</label>
+                <input type="email" id="correo" name="correo" autocomplete="email" placeholder="ejemplo@correo.com" required>
+              </div>
+              <button class="boton boton-principal" type="submit">Continuar con la reserva</button>
+              <p class="nota">Prototipo académico: este formulario no registra ni confirma una compra real.</p>
+            </fieldset>
+          </div>
+        </form>
+      </article>
+
+      <section class="ayuda" id="ayuda" aria-labelledby="titulo-ayuda">
+        <h2 id="titulo-ayuda">¿Necesitas ayuda?</h2>
+        <p>Revisa los datos de tu viaje antes de continuar. Para confirmar precios, horarios y disponibilidad, comunícate directamente con la cooperativa.</p>
+      </section>
+    </main>
+
+    <footer class="pie-pagina">
+      <div class="redes" aria-label="Redes sociales">
+        <a href="#ayuda" aria-label="Facebook">f</a>
+        <a href="#ayuda" aria-label="Instagram">◎</a>
+        <a href="#ayuda" aria-label="YouTube">▶</a>
+        <a href="#ayuda" aria-label="X">X</a>
+      </div>
+      <p>© 2026 Ruta Andina. Todos los derechos reservados.</p>
+      <a class="volver" href="#inicio">Volver al inicio ↑</a>
+    </footer>
+  </div>
+</body>
+</html>
